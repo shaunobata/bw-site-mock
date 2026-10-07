@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ご利用の流れ|B-wide</title>
-  <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="お問い合わせからご契約・入庫・出庫までの流れをご案内します。">
+  <meta name="robots" content="noindex, nofollow">
   <meta property="og:type" content="article">
   <meta property="og:title" content="ご利用の流れ|B-wide">
   <meta property="og:description" content="お問い合わせからご契約・入庫・出庫までの流れをご案内します。">
@@ -23,7 +23,7 @@
   <div class="container l-header__inner">
     <a class="l-header__logo" href="index.html" aria-label="B-wide トップページ">
       <span class="l-header__logo-mark">B-wide</span>
-      <span class="l-header__logo-sub">高級車保管・陸送・レッカー</span>
+      <span class="l-header__logo-sub">陸送・高級車保管・レッカー</span>
     </a>
     <nav class="l-header__nav" aria-label="グローバルナビゲーション">
       <ul class="c-gnav">
@@ -31,8 +31,8 @@
           <button type="button" class="c-gnav__link" aria-expanded="false" aria-controls="gnav-service">サービス <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
           <ul class="c-gnav__sub" id="gnav-service">
             <li><a href="service/index.html">サービス一覧</a></li>
-            <li><a href="service/storage.html">高級車保管<small>STORAGE</small></a></li>
             <li><a href="service/transport.html">陸送<small>TRANSPORT</small></a></li>
+            <li><a href="service/storage.html">高級車保管<small>STORAGE</small></a></li>
             <li><a href="service/towing.html">レッカー<small>TOWING</small></a></li>
           </ul>
         </li>
@@ -64,8 +64,8 @@
     <ul class="l-drawer__main">
       <li><a href="service/index.html">サービス <span class="en">SERVICE</span></a>
         <ul class="l-drawer__children">
-          <li><a href="service/storage.html">高級車保管</a></li>
           <li><a href="service/transport.html">陸送</a></li>
+          <li><a href="service/storage.html">高級車保管</a></li>
           <li><a href="service/towing.html">レッカー</a></li>
         </ul>
       </li>
@@ -107,10 +107,17 @@
 <section class="section">
   <div class="container">
     <div class="c-tabs" role="tablist" aria-label="サービスを選ぶ">
-      <button type="button" role="tab" id="tab-storage" aria-controls="panel-storage" data-hash="storage">高級車保管</button>
       <button type="button" role="tab" id="tab-transport" aria-controls="panel-transport" data-hash="transport">陸送・レッカー</button>
+      <button type="button" role="tab" id="tab-storage" aria-controls="panel-storage" data-hash="storage">高級車保管</button>
     </div>
-    <div class="c-tabpanel" role="tabpanel" id="panel-storage" aria-labelledby="tab-storage">
+    <div class="c-tabpanel" role="tabpanel" id="panel-transport" aria-labelledby="tab-transport">
+      <ol class="c-steps" style="max-width:var(--container-text)">
+        <li class="c-step"><div><h3>お問い合わせ</h3><p>車種・区間・希望日時をお知らせください。</p></div></li>
+        <li class="c-step"><div><h3>お見積り</h3><p>距離・車両の状態・日時をもとに金額をご案内します。</p></div></li>
+        <li class="c-step"><div><h3>実施</h3><p>積み込み・お届けの時点で車両の状態を確認します。</p></div></li>
+      </ol>
+    </div>
+    <div class="c-tabpanel" role="tabpanel" id="panel-storage" aria-labelledby="tab-storage" hidden>
       <ol class="c-steps" style="max-width:var(--container-text)">
         <li class="c-step"><div><h3>お問い合わせ</h3><p>フォームで車種・台数・ご紹介元をお知らせください。</p></div></li>
         <li class="c-step"><div><h3>見学・面談</h3><p>保管の環境をご覧いただき、ご希望をうかがいます。住所は日程確定後に個別にご案内します。</p></div></li>
@@ -119,13 +126,6 @@
         <li class="c-step"><div><h3>入庫(写真記録)</h3><p>車両の状態を写真で記録し、確認いただきます。</p></div></li>
         <li class="c-step"><div><h3>保管</h3><p>お届けのご依頼はお電話・メールで承ります。</p></div></li>
         <li class="c-step"><div><h3>出庫(写真記録・確認サイン)</h3><p>出庫時にも撮影し、確認のサインをいただきます。</p></div></li>
-      </ol>
-    </div>
-    <div class="c-tabpanel" role="tabpanel" id="panel-transport" aria-labelledby="tab-transport" hidden>
-      <ol class="c-steps" style="max-width:var(--container-text)">
-        <li class="c-step"><div><h3>お問い合わせ</h3><p>車種・区間・希望日時をお知らせください。レッカーでお急ぎの場合はお電話で。</p></div></li>
-        <li class="c-step"><div><h3>お見積り</h3><p>距離・車両の状態・日時をもとに金額をご案内します。</p></div></li>
-        <li class="c-step"><div><h3>実施</h3><p>積み込み・お届けの時点で車両の状態を確認します。</p></div></li>
       </ol>
     </div>
   </div>
@@ -173,8 +173,8 @@
       <nav class="l-footer__nav" aria-label="フッターナビゲーション">
         <div><h2>SERVICE</h2><ul>
           <li><a href="service/index.html">サービス一覧</a></li>
-          <li><a href="service/storage.html">高級車保管</a></li>
           <li><a href="service/transport.html">陸送</a></li>
+          <li><a href="service/storage.html">高級車保管</a></li>
           <li><a href="service/towing.html">レッカー</a></li>
         </ul></div>
         <div><h2>PRICE</h2><ul>

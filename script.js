@@ -23,6 +23,40 @@
     onScroll();
   }
 
+  /* ---------- トップのスライド: 6秒ごとに切り替え、一時停止ボタン付き ---------- */
+  const slider = document.querySelector('[data-slider]');
+  if (slider) {
+    const slides = [...slider.querySelectorAll('.c-hero-slide')];
+    const dots = [...document.querySelectorAll('.c-hero__dot')];
+    const pauseBtn = document.querySelector('[data-slider-pause]');
+    let current = 0;
+    let timer = null;
+    let paused = reduceMotion; // 動きを減らす設定の人には自動で切り替えない
+    const show = (i) => {
+      slides[current].classList.remove('is-active');
+      dots[current]?.classList.remove('is-active');
+      dots[current]?.setAttribute('aria-pressed', 'false');
+      current = (i + slides.length) % slides.length;
+      slides[current].classList.add('is-active');
+      dots[current]?.classList.add('is-active');
+      dots[current]?.setAttribute('aria-pressed', 'true');
+    };
+    const start = () => {
+      clearInterval(timer);
+      if (!paused && slides.length > 1) timer = setInterval(() => show(current + 1), 6000);
+    };
+    const setPaused = (state) => {
+      paused = state;
+      pauseBtn?.classList.toggle('is-paused', paused);
+      pauseBtn?.setAttribute('aria-label', paused ? 'スライドを再生' : 'スライドを一時停止');
+      start();
+    };
+    dots.forEach((dot, i) => dot.addEventListener('click', () => { show(i); start(); }));
+    pauseBtn?.addEventListener('click', () => setPaused(!paused));
+    document.addEventListener('visibilitychange', () => (document.hidden ? clearInterval(timer) : start()));
+    setPaused(paused);
+  }
+
   /* ---------- グローバルナビのドロップダウン ---------- */
   const dropdownItems = document.querySelectorAll('.c-gnav__item[data-dropdown]');
   const closeAll = (except) => dropdownItems.forEach((item) => {
@@ -170,7 +204,7 @@
   const form = document.querySelector('[data-contact-form]');
   if (form) {
     const allowed = {
-      type: ['storage', 'transport', 'circuit', 'towing', 'visit', 'other'],
+      type: ['transport', 'circuit', 'storage', 'towing', 'other'],
       customer: ['personal', 'business'],
     };
     const params = new URLSearchParams(location.search);

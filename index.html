@@ -93,10 +93,10 @@
 <main id="main">
 
 <section class="c-hero" data-hero>
-  <div class="c-hero__media" aria-hidden="true">
-    <video autoplay muted loop playsinline preload="metadata">
-      <source src="assets/812953830.243121.mp4" type="video/mp4">
-    </video>
+<div class="c-hero__media c-hero-slider" data-slider aria-hidden="true">
+    <div class="c-hero-slide is-active"><div class="c-photo c-photo--hero" role="img" aria-label="写真の差し込み位置: 積載車(トラック)の写真 1 ※先方から受領予定"><p class="c-photo__label"><b>PHOTO</b>積載車(トラック)の写真 1 ※先方から受領予定</p></div></div>
+    <div class="c-hero-slide"><div class="c-photo c-photo--hero c-photo--alt1" role="img" aria-label="写真の差し込み位置: 積載車(トラック)の写真 2 ※先方から受領予定"><p class="c-photo__label"><b>PHOTO</b>積載車(トラック)の写真 2 ※先方から受領予定</p></div></div>
+    <div class="c-hero-slide"><div class="c-photo c-photo--hero c-photo--alt2" role="img" aria-label="写真の差し込み位置: 積載車(トラック)の写真 3 ※先方から受領予定"><p class="c-photo__label"><b>PHOTO</b>積載車(トラック)の写真 3 ※先方から受領予定</p></div></div>
   </div>
   <div class="container c-hero__inner">
     <p class="c-hero__en" aria-hidden="true"><span>Keep.</span><span>Carry.</span><span>Recover.</span></p>
@@ -106,6 +106,12 @@
       <a class="c-btn c-btn--inverse" href="service/index.html">サービスを見る <span class="c-btn__arrow" aria-hidden="true">→</span></a>
       <a class="c-btn c-btn--primary" href="contact.html" data-ga-event="contact_click" data-location="top_hero">お問い合わせ</a>
     </div>
+  </div>
+  <div class="c-hero__controls" data-slider-controls>
+    <button type="button" class="c-hero__dot is-active" aria-label="写真1を表示" aria-pressed="true"></button>
+    <button type="button" class="c-hero__dot" aria-label="写真2を表示" aria-pressed="false"></button>
+    <button type="button" class="c-hero__dot" aria-label="写真3を表示" aria-pressed="false"></button>
+    <button type="button" class="c-hero__pause" data-slider-pause aria-label="スライドを一時停止"><span aria-hidden="true"></span></button>
   </div>
   <span class="c-hero__scroll" aria-hidden="true">SCROLL</span>
 </section>
@@ -126,26 +132,24 @@
   
 <div class="c-stat">
   <p class="c-stat__label">取引社数</p>
-  <p class="c-stat__value"><span class="c-stat__num">—</span><span class="c-stat__unit">社</span></p>
-  <p><span class="tbd">【要確認: 取引社数】</span></p>
+  <p class="c-stat__value"><span class="c-stat__num">100</span><span class="c-stat__unit">社以上</span></p>
 </div>
   
 <div class="c-stat">
-  <p class="c-stat__label">年間の陸送台数</p>
-  <p class="c-stat__value"><span class="c-stat__num">—</span><span class="c-stat__unit">台</span></p>
-  <p><span class="tbd">【要確認: 年間台数】</span></p>
+  <p class="c-stat__label">月間の陸送台数</p>
+  <p class="c-stat__value"><span class="c-stat__num">1,657</span><span class="c-stat__unit">台</span></p>
+  <p class="c-stat__note">2026年9月実績</p>
 </div>
   
 <div class="c-stat">
   <p class="c-stat__label">創業</p>
-  <p class="c-stat__value"><span class="c-stat__num">—</span><span class="c-stat__unit">年</span></p>
-  <p><span class="tbd">【要確認: 創業年】</span></p>
+  <p class="c-stat__value"><span class="c-stat__num">2016</span><span class="c-stat__unit">年</span></p>
 </div>
   
 <div class="c-stat">
   <p class="c-stat__label">収容台数</p>
-  <p class="c-stat__value"><span class="c-stat__num">—</span><span class="c-stat__unit">台</span></p>
-  <p><span class="tbd">【要確認: 収容台数】</span></p>
+  <p class="c-stat__value"><span class="c-stat__num">200</span><span class="c-stat__unit">台</span></p>
+  <p class="c-stat__note">厚木市・海老名市の全5か所</p>
 </div>
 </div></div>
   </div>
@@ -259,7 +263,7 @@
     <div class="c-pillars">
       <div class="c-pillar js-reveal"><svg class="c-pillar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="1"/><circle cx="12" cy="12.5" r="3.5"/><path d="M8.5 6l1.5-2h4l1.5 2"/></svg><h3>入出庫時の写真記録</h3><p>お預かり時とお返し時に車両の状態を写真で記録し、オーナー様に確認いただきます。</p><span class="c-pillar__en" aria-hidden="true">RECORD</span></div>
       <div class="c-pillar js-reveal" data-delay="0.1"><svg class="c-pillar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><h3>補償・保険</h3><p>保管・陸送中の補償の範囲を公開します。<span class="tbd">【要確認: 補償の範囲と上限】</span></p><span class="c-pillar__en" aria-hidden="true">INSURANCE</span></div>
-      <div class="c-pillar js-reveal" data-delay="0.2"><svg class="c-pillar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="1"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/><circle cx="12" cy="15.5" r="1.3"/></svg><h3>所在地を公開しない</h3><p>お預かりしているお車を守るため、保管施設の所在地は公開していません。</p><span class="c-pillar__en" aria-hidden="true">SECURITY</span></div>
+      <div class="c-pillar js-reveal" data-delay="0.2"><svg class="c-pillar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="1"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/><circle cx="12" cy="15.5" r="1.3"/></svg><h3>防犯設備と所在地の非公開</h3><p>防犯カメラ・赤外線センサーで見守り、保管施設の所在地の詳細は公開していません。</p><span class="c-pillar__en" aria-hidden="true">SECURITY</span></div>
       <div class="c-pillar js-reveal" data-delay="0.3"><svg class="c-pillar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4" width="17" height="16" rx="1"/><path d="M7.5 9h9M7.5 13h9M7.5 17h5"/></svg><h3>審査制・定員制</h3><p>一台ずつ確実にお預かりするため、お受けできる台数に限りがあります。<span class="tbd">【要確認: 方式・基準】</span></p><span class="c-pillar__en" aria-hidden="true">POLICY</span></div>
     </div>
     <div class="u-mt-7 js-reveal"><a class="c-btn c-btn--inverse" href="safety.html">安心への取り組みを見る <span class="c-btn__arrow" aria-hidden="true">→</span></a></div>
@@ -320,8 +324,8 @@
         <p class="l-footer__logo">B-wide</p>
         <p class="l-footer__company">
           正式社名 <span class="tbd">【要確認: 正式社名】</span><br>
-          本社所在地 <span class="tbd">【要確認: 公開可否】</span><br>
-          保管施設: 横浜市内 <span class="tbd">【要確認: エリア表記】</span>(所在地は非公開)
+          本社 神奈川県横浜市都筑区勝田町753番地5<br>
+          保管施設 厚木市・海老名市(全5か所。所在地の詳細は非公開)
         </p>
       </div>
       <nav class="l-footer__nav" aria-label="フッターナビゲーション">

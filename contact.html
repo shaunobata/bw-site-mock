@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>お問い合わせ|B-wide</title>
-  <meta name="description" content="陸送・高級車保管・レッカーのご相談、お見積り、見学のお申し込みはこちらから。">
+  <meta name="description" content="陸送・高級車保管・レッカーのご相談、お見積りはこちらから。">
   <meta name="robots" content="noindex, nofollow">
   <meta property="og:type" content="article">
   <meta property="og:title" content="お問い合わせ|B-wide">
-  <meta property="og:description" content="陸送・高級車保管・レッカーのご相談、お見積り、見学のお申し込みはこちらから。">
+  <meta property="og:description" content="陸送・高級車保管・レッカーのご相談、お見積りはこちらから。">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -101,7 +101,7 @@
     </ol></nav>
     <span class="c-page-head__en" aria-hidden="true">CONTACT</span>
     <h1>お問い合わせ</h1>
-    <p class="c-page-head__lead">ご相談・お見積り・見学のお申し込みを承ります。<span class="tbd">【要確認: 返信の目安】</span>以内に担当者よりご連絡します。</p>
+    <p class="c-page-head__lead">ご相談・お見積りを承ります。<span class="tbd">【要確認: 返信の目安】</span>以内に担当者よりご連絡します。</p>
   </div>
 </section>
 <section class="section">
@@ -116,7 +116,7 @@
 
       <fieldset class="c-field" data-validate="choice">
         <legend>お問い合わせ種別 <span class="c-badge c-badge--req">必須</span></legend>
-        <div class="c-choices "><label class="c-choice"><input type="radio" name="inquiry_type" value="transport" id="inquiry_type-transport"><span>陸送</span></label><label class="c-choice"><input type="radio" name="inquiry_type" value="circuit" id="inquiry_type-circuit"><span>サーキット送迎</span></label><label class="c-choice"><input type="radio" name="inquiry_type" value="storage" id="inquiry_type-storage"><span>高級車保管</span></label><label class="c-choice"><input type="radio" name="inquiry_type" value="towing" id="inquiry_type-towing"><span>レッカー</span></label><label class="c-choice"><input type="radio" name="inquiry_type" value="visit" id="inquiry_type-visit"><span>見学のご希望</span></label><label class="c-choice"><input type="radio" name="inquiry_type" value="other" id="inquiry_type-other"><span>その他</span></label></div>
+        <div class="c-choices "><label class="c-choice"><input type="radio" name="inquiry_type" value="transport" id="inquiry_type-transport"><span>陸送</span></label><label class="c-choice"><input type="radio" name="inquiry_type" value="circuit" id="inquiry_type-circuit"><span>サーキット送迎</span></label><label class="c-choice"><input type="radio" name="inquiry_type" value="storage" id="inquiry_type-storage"><span>高級車保管</span></label><label class="c-choice"><input type="radio" name="inquiry_type" value="towing" id="inquiry_type-towing"><span>レッカー</span></label><label class="c-choice"><input type="radio" name="inquiry_type" value="other" id="inquiry_type-other"><span>その他</span></label></div>
         <p class="c-field__error">お問い合わせ種別を選んでください</p>
       </fieldset>
 
@@ -184,25 +184,6 @@
         <input class="c-input" id="referral_detail" name="referral_detail" maxlength="100" placeholder="例: ディーラー名">
       </div>
 
-      <div data-cond="visit" hidden style="display:grid;gap:var(--space-5)">
-        <div class="c-field" data-validate="date">
-          <label class="c-field__label" for="visit_date_1">見学の第1希望 <span class="c-badge c-badge--req">必須</span></label>
-          <div class="c-visit-row"><input class="c-input" type="date" id="visit_date_1" name="visit_date_1"><select class="c-select" id="visit_slot_1" name="visit_slot_1" aria-label="第1希望の時間帯"><option value="">時間帯</option><option>午前</option><option>午後</option></select></div>
-          <p class="c-field__help">保管施設の住所は、日程が決まりましたら個別にご案内します。時間帯 <span class="tbd">【要確認: 受付時間】</span></p>
-          <p class="c-field__error">見学の第1希望日を選んでください(翌日以降)</p>
-        </div>
-        <div class="c-field" data-validate="date-optional">
-          <label class="c-field__label" for="visit_date_2">見学の第2希望 <span class="c-badge c-badge--opt">任意</span></label>
-          <div class="c-visit-row"><input class="c-input" type="date" id="visit_date_2" name="visit_date_2"><select class="c-select" id="visit_slot_2" name="visit_slot_2" aria-label="第2希望の時間帯"><option value="">時間帯</option><option>午前</option><option>午後</option></select></div>
-          <p class="c-field__error">翌日以降の日付を選んでください</p>
-        </div>
-        <div class="c-field" data-validate="date-optional">
-          <label class="c-field__label" for="visit_date_3">見学の第3希望 <span class="c-badge c-badge--opt">任意</span></label>
-          <div class="c-visit-row"><input class="c-input" type="date" id="visit_date_3" name="visit_date_3"><select class="c-select" id="visit_slot_3" name="visit_slot_3" aria-label="第3希望の時間帯"><option value="">時間帯</option><option>午前</option><option>午後</option></select></div>
-          <p class="c-field__error">翌日以降の日付を選んでください</p>
-        </div>
-      </div>
-
       <div class="c-field" data-validate="max">
         <label class="c-field__label" for="message">ご相談内容 <span class="c-badge c-badge--opt">任意</span></label>
         <textarea class="c-textarea" id="message" name="message" maxlength="2000"></textarea>
@@ -219,7 +200,7 @@
         <button type="submit" class="c-btn c-btn--primary">送信する</button>
       </div>
     </form>
-    <p class="mock-note u-mt-7">モックのため送信は行わず、入力チェックのあと完了ページへ移動します。本番は Contact Form 7(reCAPTCHA v3・Flamingo で保存)で実装します。URL に ?type=storage&amp;customer=personal などを付けると、種別・区分が選ばれた状態で開きます。</p>
+    <p class="mock-note u-mt-7">モックのため送信は行わず、入力チェックのあと完了ページへ移動します。本番は Contact Form 7(reCAPTCHA v3・Flamingo で保存)で実装します。URL に ?type=storage&amp;customer=personal などを付けると、種別・区分が選ばれた状態で開きます。保管施設へのお立ち入りをご遠慮いただく方針のため、見学の申し込み欄は外しています。</p>
   </div>
 </section>
 </main>
@@ -232,8 +213,8 @@
         <p class="l-footer__logo">B-wide</p>
         <p class="l-footer__company">
           正式社名 <span class="tbd">【要確認: 正式社名】</span><br>
-          本社所在地 <span class="tbd">【要確認: 公開可否】</span><br>
-          保管施設: 横浜市内 <span class="tbd">【要確認: エリア表記】</span>(所在地は非公開)
+          本社 神奈川県横浜市都筑区勝田町753番地5<br>
+          保管施設 厚木市・海老名市(全5か所。所在地の詳細は非公開)
         </p>
       </div>
       <nav class="l-footer__nav" aria-label="フッターナビゲーション">

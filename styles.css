@@ -824,3 +824,27 @@ button { cursor: pointer; }
 .js-reveal.is-visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .js-reveal { opacity: 1; transform: none; } }
 .no-js .js-reveal { opacity: 1; transform: none; }
+
+/* ---------- 29. トップのスライド(トラックの写真) ---------- */
+.c-hero-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.2s var(--easing); }
+.c-hero-slide.is-active { opacity: 1; }
+.c-hero-slide img, .c-hero-slide .c-photo { width: 100%; height: 100%; object-fit: cover; aspect-ratio: auto; }
+.c-hero-slide.is-active img, .c-hero-slide.is-active .c-photo { animation: hero-zoom 7s linear forwards; }
+@keyframes hero-zoom { from { transform: scale(1); } to { transform: scale(1.06); } }
+.c-photo--hero { align-items: flex-start; }
+.c-photo--hero .c-photo__label { padding-top: calc(var(--header-h) + var(--space-4)); margin-left: auto; text-align: right; padding-right: var(--gutter); }
+.c-photo--alt1 { background: linear-gradient(160deg, #0E2350 0%, #1B4799 55%, #3F78DB 100%); }
+.c-photo--alt2 { background: linear-gradient(200deg, #15367A 0%, #0E2350 60%, #1A1F2B 100%); }
+.c-hero__controls { position: absolute; z-index: 2; left: 50%; bottom: var(--space-5); transform: translateX(-50%); display: flex; align-items: center; gap: var(--space-2); }
+@media (min-width: 1024px) { .c-hero__controls { left: auto; right: calc(var(--gutter) + 40px); transform: none; bottom: var(--space-8); } }
+.c-hero__dot { width: 32px; height: 32px; padding: 0; border: 0; background: none; position: relative; }
+.c-hero__dot::before { content: ""; position: absolute; left: 4px; right: 4px; top: 15px; height: 2px; background: rgba(255,255,255,.45); transition: background var(--duration-fast); }
+.c-hero__dot.is-active::before { background: var(--color-accent); }
+.c-hero__pause { width: 32px; height: 32px; margin-left: var(--space-2); border: 1px solid rgba(255,255,255,.6); border-radius: var(--radius-full); background: rgba(14,35,80,.3); display: grid; place-items: center; }
+.c-hero__pause span { width: 8px; height: 10px; border-left: 2px solid #fff; border-right: 2px solid #fff; }
+.c-hero__pause.is-paused span { width: 0; height: 0; border-style: solid; border-width: 5px 0 5px 8px; border-color: transparent transparent transparent #fff; margin-left: 2px; }
+.c-hero :focus-visible { outline-color: #fff; }
+@media (prefers-reduced-motion: reduce) { .c-hero-slide { transition: none; } .c-hero-slide.is-active img, .c-hero-slide.is-active .c-photo { animation: none; } }
+
+.c-stat__note { margin-top: var(--space-1); font-size: var(--fs-caption); color: var(--color-text-sub); }
+.c-photo--hero::after { left: 78%; top: 50%; width: 64px; height: 64px; }

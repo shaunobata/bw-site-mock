@@ -14,7 +14,8 @@
   --color-primary-300: #8FB0EB; /* 濃紺背景上の補助文字 */
   --color-primary-100: #DCE6F8;
   --color-primary-50:  #F1F5FC;
-  --color-accent:      #C9A96E; /* 濃紺背景上のみ */
+  --color-accent:      #F26B4B; /* 濃紺背景上のみ(5.08:1) */
+  --color-accent-strong: #C3202D; /* 白・淡い背景上のラベル(5.89:1) */
 
   --color-text:         #1A1F2B;
   --color-text-sub:     #4A5263;
@@ -522,7 +523,7 @@ button { cursor: pointer; }
 .section--dark .c-checklist li { border-color: rgba(255,255,255,.18); }
 .section--dark .c-checklist li::before {
   border-color: var(--color-accent);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C9A96E' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F26B4B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E");
 }
 
 /* ---------- 15. サービスガイド表(参考サイトの SERVICE GUIDE の考え方) ---------- */
@@ -888,3 +889,52 @@ button { cursor: pointer; }
 .c-gnav__link--recruit { color: var(--color-primary-600); }
 .is-transparent .c-gnav__link--recruit { color: var(--color-accent); }
 .l-header__contact .c-btn__icon { width: 16px; height: 16px; }
+
+/* ---------- 31. 陸送の会社らしい見せ方(2026-10-18): 日本語の見出しを主役に、英字は小さなラベル ---------- */
+.c-section-head__en {
+  display: inline-flex; align-items: center; gap: var(--space-3);
+  font-size: var(--fs-small); letter-spacing: .2em; line-height: 1.4; text-transform: uppercase;
+  color: var(--color-accent-strong); margin-bottom: var(--space-3);
+}
+.c-section-head__en::before { content: ""; width: 24px; height: 3px; background: currentColor; }
+.section--dark .c-section-head__en { color: var(--color-accent); }
+.c-section-head h2 { font-size: clamp(26px, 3.4vw, 40px); line-height: 1.4; }
+.c-page-head__en {
+  display: inline-flex; align-items: center; gap: var(--space-3); margin-top: var(--space-7);
+  font-size: var(--fs-small); letter-spacing: .2em; color: var(--color-accent-strong);
+}
+.c-page-head__en::before { content: ""; width: 24px; height: 3px; background: currentColor; }
+.c-page-head h1 { font-size: clamp(30px, 4.4vw, 52px); }
+.c-page-head--photo .c-page-head__en { font-size: var(--fs-small); color: var(--color-accent); }
+.c-eyebrow { color: var(--color-accent-strong); }
+.c-eyebrow::before { height: 3px; width: 24px; }
+.c-card-service__en, .c-fleet-card__en, .c-feature__num, .c-price-entry__en { color: var(--color-accent-strong); }
+.section--dark .c-feature__num { color: var(--color-accent); }
+.c-cta-band__en { font-size: var(--fs-small); letter-spacing: .2em; color: var(--color-accent); display: inline-flex; align-items: center; gap: var(--space-3); }
+.c-cta-band__en::before { content: ""; width: 24px; height: 3px; background: currentColor; }
+.c-cta-band h2 { font-size: clamp(26px, 3.4vw, 40px); }
+
+/* ファーストビュー: 日本語のキャッチコピーを主役に */
+.c-hero__label { display: inline-block; padding: 4px 12px; background: var(--color-accent-strong); color: #fff; font-size: var(--fs-small); font-weight: var(--fw-bold); letter-spacing: .08em; }
+.c-hero__catch { margin-top: var(--space-5); font-size: clamp(40px, 7vw, 88px) !important; line-height: 1.25 !important; letter-spacing: .04em; }
+.c-hero__en-sub { margin-top: var(--space-3); font-family: var(--font-en); font-size: clamp(16px, 1.6vw, 20px); font-weight: var(--fw-medium); letter-spacing: .06em; color: var(--color-accent); }
+.c-hero__sub { max-width: 34em; }
+.c-btn--accent { background: var(--color-accent-strong); color: #fff; }
+.c-btn--accent:hover { background: #A11A25; }
+
+/* 大きな数字(月間の陸送台数) */
+.c-bignum { border-left: 6px solid var(--color-accent-strong); padding-left: var(--space-5); }
+.c-bignum__label { font-size: var(--fs-h4); font-weight: var(--fw-bold); }
+.c-bignum__value { display: flex; align-items: baseline; gap: var(--space-2); line-height: 1; margin-top: var(--space-3); }
+.c-bignum__value .u-en { font-size: clamp(72px, 12vw, 148px); font-weight: var(--fw-bold); color: var(--color-primary-900); letter-spacing: -.02em; }
+.c-bignum__unit { font-size: clamp(24px, 3vw, 36px); font-weight: var(--fw-bold); }
+.c-bignum__note { margin-top: var(--space-3); font-size: var(--fs-small); color: var(--color-text-sub); }
+@media (min-width: 1024px) { .c-stats--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* あわせて承るサービス(高級車保管) */
+.c-other-service { display: grid; border: 1px solid var(--color-border); border-radius: var(--radius-m); overflow: hidden; background: var(--color-bg); transition: box-shadow var(--duration-base) var(--easing); }
+.c-other-service:hover { box-shadow: var(--shadow-card-hover); }
+@media (min-width: 768px) { .c-other-service { grid-template-columns: 4fr 8fr; } .c-other-service .c-photo { height: 100%; aspect-ratio: auto; min-height: 220px; } }
+.c-other-service__body { padding: var(--space-6) var(--space-5); }
+.c-other-service h2 { font-size: var(--fs-h3); }
+.c-other-service p { margin-top: var(--space-3); color: var(--color-text-sub); }

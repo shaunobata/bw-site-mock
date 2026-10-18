@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>お問い合わせ|B-wide</title>
-  <meta name="description" content="陸送・高級車保管・レッカーのご相談、お見積りはこちらから。">
   <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="B-wideへのご相談・お見積りは、お電話で承っています。">
   <meta property="og:type" content="article">
   <meta property="og:title" content="お問い合わせ|B-wide">
-  <meta property="og:description" content="陸送・高級車保管・レッカーのご相談、お見積りはこちらから。">
+  <meta property="og:description" content="B-wideへのご相談・お見積りは、お電話で承っています。">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="has-fixed-cta">
 
 <a class="u-skip" href="#main">本文へ移動</a>
 <header class="l-header is-solid">
@@ -31,25 +31,19 @@
           <button type="button" class="c-gnav__link" aria-expanded="false" aria-controls="gnav-service">サービス <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
           <ul class="c-gnav__sub" id="gnav-service">
             <li><a href="service/index.html">サービス一覧</a></li>
-            <li><a href="service/transport.html">陸送<small>TRANSPORT</small></a></li>
+            <li><a href="service/transport.html">陸送・レッカー<small>TRANSPORT</small></a></li>
             <li><a href="service/storage.html">高級車保管<small>STORAGE</small></a></li>
-            <li><a href="service/towing.html">レッカー<small>TOWING</small></a></li>
-          </ul>
-        </li>
-        <li class="c-gnav__item" data-dropdown>
-          <button type="button" class="c-gnav__link" aria-expanded="false" aria-controls="gnav-price">料金 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-          <ul class="c-gnav__sub" id="gnav-price">
-            <li><a href="price/personal.html">個人のお客様<small>表示はすべて税込</small></a></li>
-            <li><a href="price/business.html">法人のお客様<small>個別見積・税抜表記</small></a></li>
+            <li><a href="service/fleet.html">保有車両<small>FLEET</small></a></li>
           </ul>
         </li>
         <li class="c-gnav__item"><a class="c-gnav__link" href="case/index.html">事例</a></li>
         <li class="c-gnav__item"><a class="c-gnav__link" href="safety.html">安心への取り組み</a></li>
         <li class="c-gnav__item"><a class="c-gnav__link" href="company.html">会社概要</a></li>
+        <li class="c-gnav__item"><a class="c-gnav__link c-gnav__link--recruit" href="recruit.html">採用情報</a></li>
       </ul>
     </nav>
     <div class="l-header__actions">
-      <a class="c-btn c-btn--primary l-header__contact" href="contact.html" data-ga-event="contact_click" data-location="header">お問い合わせ</a>
+      <a class="c-btn c-btn--primary l-header__contact" href="contact.html" data-ga-event="contact_click" data-location="header"><svg class="c-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> お問い合わせ</a>
       <button type="button" class="l-header__menu-btn" aria-controls="drawer" aria-expanded="false" aria-label="メニューを開く"><span class="bars"></span>MENU</button>
     </div>
   </div>
@@ -58,35 +52,31 @@
 <div class="l-drawer" id="drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="メニュー">
   <div class="container l-drawer__head">
     <a class="l-header__logo" href="index.html"><span class="l-header__logo-mark">B-wide</span></a>
-    <button type="button" class="l-drawer__close" aria-label="メニューを閉じる"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>CLOSE</button>
+    <button type="button" class="l-drawer__close" aria-label="メニューを閉じる"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>CLOSE</button>
   </div>
   <div class="container l-drawer__body">
     <ul class="l-drawer__main">
       <li><a href="service/index.html">サービス <span class="en">SERVICE</span></a>
         <ul class="l-drawer__children">
-          <li><a href="service/transport.html">陸送</a></li>
+          <li><a href="service/transport.html">陸送・レッカー</a></li>
           <li><a href="service/storage.html">高級車保管</a></li>
-          <li><a href="service/towing.html">レッカー</a></li>
-        </ul>
-      </li>
-      <li><a href="price/index.html">料金 <span class="en">PRICE</span></a>
-        <ul class="l-drawer__children">
-          <li><a href="price/personal.html">個人のお客様</a></li>
-          <li><a href="price/business.html">法人のお客様</a></li>
+          <li><a href="service/fleet.html">保有車両</a></li>
         </ul>
       </li>
       <li><a href="case/index.html">事例 <span class="en">CASE</span></a></li>
       <li><a href="safety.html">安心への取り組み <span class="en">SAFETY</span></a></li>
       <li><a href="company.html">会社概要 <span class="en">COMPANY</span></a></li>
+      <li><a href="recruit.html">採用情報 <span class="en">RECRUIT</span></a></li>
     </ul>
     <ul class="l-drawer__sub">
       <li><a href="flow.html">ご利用の流れ</a></li>
       <li><a href="faq.html">よくある質問</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
       <li><a href="privacy.html">プライバシーポリシー</a></li>
     </ul>
     <div class="l-drawer__cta">
-      <a class="c-btn c-btn--primary" href="contact.html">お問い合わせ</a>
-      <a class="c-btn c-btn--secondary" href="tel:"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> 電話する<span class="tbd">※公開時のみ</span></a>
+      <a class="c-btn c-btn--primary" href="tel:" data-ga-event="phone_tap" data-location="drawer"><svg class="c-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> 電話する</a>
+      <p class="l-drawer__tel"><span class="tbd">【要確認: 電話番号】</span> 受付時間 <span class="tbd">【要確認: 受付時間】</span></p>
     </div>
   </div>
 </div>
@@ -101,106 +91,23 @@
     </ol></nav>
     <span class="c-page-head__en" aria-hidden="true">CONTACT</span>
     <h1>お問い合わせ</h1>
-    <p class="c-page-head__lead">ご相談・お見積りを承ります。<span class="tbd">【要確認: 返信の目安】</span>以内に担当者よりご連絡します。</p>
+    <p class="c-page-head__lead">ご相談・お見積りは、お電話で承っています。</p>
   </div>
 </section>
 <section class="section">
   <div class="container--text">
-    <div class="c-box" style="display:flex;flex-wrap:wrap;gap:var(--space-4);justify-content:space-between;align-items:center">
-      <div><p style="margin:0;font-weight:700;color:var(--color-text)">お電話でのお問い合わせ</p><p style="margin-top:4px">受付時間 <span class="tbd">【要確認: 受付時間】</span></p></div>
-      <a class="c-btn c-btn--secondary c-btn--sm" href="tel:" data-ga-event="phone_tap" data-location="contact"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> <span class="tbd">【要確認: 電話番号】</span></a>
+    <div class="c-tel-panel js-reveal">
+      <p class="c-quote__label">お電話でのお問い合わせ</p>
+      <a class="c-tel-panel__num" href="tel:" data-ga-event="phone_tap" data-location="contact"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span class="tbd">【要確認: 電話番号】</span></a>
+      <p>受付時間 <span class="tbd">【要確認: 受付時間】</span></p>
+      <div class="c-btn-row c-btn-row--center u-mt-6"><a class="c-btn c-btn--primary" href="tel:" data-ga-event="phone_tap" data-location="contact_button"><svg class="c-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> 電話で問い合わせる</a></div>
     </div>
-
-    <form class="c-form u-mt-7" action="contact/thanks.html" method="post" novalidate data-contact-form>
-      <div class="c-form__summary" tabindex="-1" role="alert" hidden>入力内容をご確認ください(<span data-count>0</span>件)<ul></ul></div>
-
-      <fieldset class="c-field" data-validate="choice">
-        <legend>お問い合わせ種別 <span class="c-badge c-badge--req">必須</span></legend>
-        <div class="c-choices "><label class="c-choice"><input type="radio" name="inquiry_type" value="transport" id="inquiry_type-transport"><span>陸送</span></label><label class="c-choice"><input type="radio" name="inquiry_type" value="circuit" id="inquiry_type-circuit"><span>サーキット送迎</span></label><label class="c-choice"><input type="radio" name="inquiry_type" value="storage" id="inquiry_type-storage"><span>高級車保管</span></label><label class="c-choice"><input type="radio" name="inquiry_type" value="towing" id="inquiry_type-towing"><span>レッカー</span></label><label class="c-choice"><input type="radio" name="inquiry_type" value="other" id="inquiry_type-other"><span>その他</span></label></div>
-        <p class="c-field__error">お問い合わせ種別を選んでください</p>
-      </fieldset>
-
-      <fieldset class="c-field" data-validate="choice">
-        <legend>お客様の区分 <span class="c-badge c-badge--req">必須</span></legend>
-        <div class="c-choices c-choices--2"><label class="c-choice"><input type="radio" name="customer_type" value="personal" id="customer_type-personal"><span>個人</span></label><label class="c-choice"><input type="radio" name="customer_type" value="business" id="customer_type-business"><span>法人</span></label></div>
-        <p class="c-field__error">個人・法人のどちらかを選んでください</p>
-      </fieldset>
-
-      <div class="c-field" data-validate="required" data-cond="business" hidden>
-        <label class="c-field__label" for="company_name">会社名 <span class="c-badge c-badge--req">必須</span></label>
-        <input class="c-input" id="company_name" name="company_name" maxlength="100" autocomplete="organization" aria-describedby="err-company">
-        <p class="c-field__error" id="err-company">会社名を入力してください</p>
-      </div>
-
-      <div class="c-field" data-validate="required">
-        <label class="c-field__label" for="your_name">お名前 <span class="c-badge c-badge--req">必須</span></label>
-        <input class="c-input" id="your_name" name="your_name" maxlength="50" autocomplete="name" aria-describedby="err-name">
-        <p class="c-field__error" id="err-name">お名前を入力してください</p>
-      </div>
-
-      <div class="c-field" data-validate="email">
-        <label class="c-field__label" for="your_email">メールアドレス <span class="c-badge c-badge--req">必須</span></label>
-        <input class="c-input" type="email" id="your_email" name="your_email" autocomplete="email" aria-describedby="err-email">
-        <p class="c-field__error" id="err-email">メールアドレスの形式で入力してください(例: name@example.com)</p>
-      </div>
-
-      <div class="c-field" data-validate="tel">
-        <label class="c-field__label" for="your_tel">電話番号 <span class="c-badge c-badge--req">必須</span></label>
-        <input class="c-input" type="tel" id="your_tel" name="your_tel" inputmode="tel" autocomplete="tel" aria-describedby="help-tel err-tel">
-        <p class="c-field__help" id="help-tel">半角数字(ハイフンあり・なし、どちらでも可)</p>
-        <p class="c-field__error" id="err-tel">電話番号を半角数字で入力してください</p>
-      </div>
-
-      <div class="c-field" data-validate="required">
-        <label class="c-field__label" for="vehicle">車種(メーカー・モデル) <span class="c-badge c-badge--req">必須</span></label>
-        <input class="c-input" id="vehicle" name="vehicle" maxlength="100" aria-describedby="err-vehicle">
-        <p class="c-field__error" id="err-vehicle">車種を入力してください</p>
-      </div>
-
-      <div class="c-field" data-validate="required">
-        <label class="c-field__label" for="vehicle_count">台数 <span class="c-badge c-badge--req">必須</span></label>
-        <select class="c-select" id="vehicle_count" name="vehicle_count" aria-describedby="err-count"><option value="">選んでください</option><option>1台</option><option>2台</option><option>3台以上</option></select>
-        <p class="c-field__error" id="err-count">台数を選んでください</p>
-      </div>
-
-      <div class="c-field" data-cond="plate" hidden>
-        <label class="c-field__label" for="plate_status">ナンバーの有無・競技車両 <span class="c-badge c-badge--opt">任意</span></label>
-        <select class="c-select" id="plate_status" name="plate_status"><option value="">選んでください</option><option>ナンバー付き</option><option>ナンバーなし</option><option>競技車両</option></select>
-      </div>
-
-      <div class="c-field" data-validate="max">
-        <label class="c-field__label" for="preferred_detail">ご希望の時期・区間 <span class="c-badge c-badge--opt">任意</span></label>
-        <input class="c-input" id="preferred_detail" name="preferred_detail" maxlength="200" placeholder="例: 11月中旬、〇〇から〇〇まで">
-        <p class="c-field__error">200文字以内で入力してください</p>
-      </div>
-
-      <div class="c-field" data-validate="required">
-        <label class="c-field__label" for="referral_source">ご紹介元 <span class="c-badge c-badge--req">必須</span></label>
-        <select class="c-select" id="referral_source" name="referral_source" aria-describedby="err-ref"><option value="">選んでください</option><option value="dealer">ディーラーからの紹介</option><option value="other_referral">その他の紹介</option><option value="search">検索</option><option value="other">その他</option></select>
-        <p class="c-field__error" id="err-ref">ご紹介元を選んでください</p>
-      </div>
-      <div class="c-field">
-        <label class="c-field__label" for="referral_detail">ご紹介元の詳細 <span class="c-badge c-badge--opt">任意</span></label>
-        <input class="c-input" id="referral_detail" name="referral_detail" maxlength="100" placeholder="例: ディーラー名">
-      </div>
-
-      <div class="c-field" data-validate="max">
-        <label class="c-field__label" for="message">ご相談内容 <span class="c-badge c-badge--opt">任意</span></label>
-        <textarea class="c-textarea" id="message" name="message" maxlength="2000"></textarea>
-        <p class="c-field__error">2000文字以内で入力してください</p>
-      </div>
-
-      <div class="c-field" data-validate="agree">
-        <label class="c-choice"><input type="checkbox" id="privacy_agree" name="privacy_agree" value="1"><span><a class="c-text-link" href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意する <span class="c-badge c-badge--req">必須</span></span></label>
-        <p class="c-field__error">プライバシーポリシーへの同意が必要です</p>
-      </div>
-
-      <div class="c-form__submit">
-        <p>送信前に、入力内容をもう一度ご確認ください。</p>
-        <button type="submit" class="c-btn c-btn--primary">送信する</button>
-      </div>
-    </form>
-    <p class="mock-note u-mt-7">モックのため送信は行わず、入力チェックのあと完了ページへ移動します。本番は Contact Form 7(reCAPTCHA v3・Flamingo で保存)で実装します。URL に ?type=storage&amp;customer=personal などを付けると、種別・区分が選ばれた状態で開きます。保管施設へのお立ち入りをご遠慮いただく方針のため、見学の申し込み欄は外しています。</p>
+    <div class="c-box u-mt-7 js-reveal">
+      <h3>お電話の際にお知らせいただきたいこと</h3>
+      <ul><li>ご希望のサービス(陸送・レッカー・保管)</li><li>車種(メーカー・モデル)と台数</li><li>区間・ご希望の日時、保管の期間</li><li>法人のお客様は会社名、ご紹介の場合はご紹介元</li></ul>
+    </div>
+    <p class="u-mt-6">採用についてのお問い合わせも、同じ番号で承っています。<a class="c-text-link" href="recruit.html">採用情報</a></p>
+    <p class="mock-note u-mt-6">お問い合わせは電話のみとし、フォームは問い合わせが増えてから検討します(2026-10 先方方針)。</p>
   </div>
 </section>
 </main>
@@ -214,29 +121,30 @@
         <p class="l-footer__company">
           正式社名 <span class="tbd">【要確認: 正式社名】</span><br>
           本社 神奈川県横浜市都筑区勝田町753番地5<br>
-          保管施設 厚木市・海老名市(全5か所。所在地の詳細は非公開)
+          保管施設 厚木市・海老名市(全5か所。所在地の詳細は非公開)<br>
+          TEL <span class="tbd">【要確認: 電話番号】</span>
         </p>
       </div>
       <nav class="l-footer__nav" aria-label="フッターナビゲーション">
         <div><h2>SERVICE</h2><ul>
           <li><a href="service/index.html">サービス一覧</a></li>
-          <li><a href="service/transport.html">陸送</a></li>
+          <li><a href="service/transport.html">陸送・レッカー</a></li>
           <li><a href="service/storage.html">高級車保管</a></li>
-          <li><a href="service/towing.html">レッカー</a></li>
-        </ul></div>
-        <div><h2>PRICE</h2><ul>
-          <li><a href="price/personal.html">個人のお客様</a></li>
-          <li><a href="price/business.html">法人のお客様</a></li>
-        </ul></div>
-        <div><h2>CASE</h2><ul>
-          <li><a href="case/index.html">事例一覧</a></li>
+          <li><a href="service/fleet.html">保有車両</a></li>
         </ul></div>
         <div><h2>ABOUT</h2><ul>
+          <li><a href="case/index.html">事例</a></li>
           <li><a href="safety.html">安心への取り組み</a></li>
-          <li><a href="flow.html">ご利用の流れ</a></li>
           <li><a href="company.html">会社概要</a></li>
+        </ul></div>
+        <div><h2>GUIDE</h2><ul>
+          <li><a href="flow.html">ご利用の流れ</a></li>
           <li><a href="faq.html">よくある質問</a></li>
           <li><a href="contact.html">お問い合わせ</a></li>
+        </ul></div>
+        <div><h2>RECRUIT</h2><ul>
+          <li><a href="recruit.html">採用情報</a></li>
+          <li><a href="recruit.html#requirements">募集要項</a></li>
         </ul></div>
       </nav>
     </div>
@@ -247,6 +155,10 @@
   </div>
 </footer>
 
+<div class="c-fixed-cta">
+  <a class="c-fixed-cta__tel" href="tel:" data-ga-event="phone_tap" data-location="fixed_cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> 電話する</a>
+  <a class="c-fixed-cta__recruit" href="recruit.html" data-location="fixed_cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9" r="2.3"/><path d="M15.5 14.2A4.5 4.5 0 0 1 21 18.5"/></svg> 採用情報</a>
+</div>
 <script src="script.js"></script>
 </body>
 </html>

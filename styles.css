@@ -268,7 +268,11 @@ button { cursor: pointer; }
 .l-header--overlay.is-transparent { background: transparent; color: var(--color-text-inverse); box-shadow: none; }
 .l-header__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); height: 100%; }
 .l-header__logo { display: inline-flex; align-items: baseline; gap: var(--space-3); flex: none; }
-.l-header__logo-mark { font-family: var(--font-en); font-weight: var(--fw-bold); font-size: 22px; letter-spacing: .06em; }
+.l-header__logo { align-items: center; }
+.l-header__logo-img { display: block; height: 24px; width: auto; }
+.l-header__logo-img--white, .is-transparent .l-header__logo-img { display: none; }
+.is-transparent .l-header__logo-img--white { display: block; }
+@media (min-width: 1024px) { .l-header__logo-img { height: 28px; } }
 .l-header__logo-sub { display: none; font-size: var(--fs-caption); color: var(--color-text-sub); letter-spacing: .08em; }
 .is-transparent .l-header__logo-sub { color: rgba(255,255,255,.8); }
 @media (min-width: 1280px) { .l-header__logo-sub { display: inline; } }
@@ -431,6 +435,21 @@ button { cursor: pointer; }
 .c-photo__label b { display: block; font-family: var(--font-en); letter-spacing: .2em; color: var(--color-accent); font-weight: var(--fw-bold); }
 .c-photo--wide { aspect-ratio: 3 / 2; }
 .c-photo--tall { aspect-ratio: 4 / 5; }
+.c-photo--side { aspect-ratio: 2 / 1; } /* 保有車両: 車体を真横から */
+/* 受領した写真を入れた枠 */
+.c-photo--img { display: block; background: var(--color-primary-900); }
+.c-photo--img::before, .c-photo--img::after { content: none; }
+.c-photo--img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+/* 下層ページのタイトル背景の写真 */
+.c-page-head--bg { isolation: isolate; }
+.c-page-head--photo > .c-page-head__bg { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; object-fit: cover; }
+.c-page-head--bg::before { background: linear-gradient(90deg, rgba(14,35,80,.9) 0%, rgba(14,35,80,.7) 50%, rgba(14,35,80,.4) 100%); }
+/* スマホ: 写真を文字の下の帯にまとめ、文字と重ねない(縦長の画面で写真の主役が切れないように) */
+@media (max-width: 767px) {
+  .c-page-head--bg { padding-bottom: 220px; }
+  .c-page-head--photo > .c-page-head__bg { top: auto; height: 260px; }
+  .c-page-head--bg::before { background: linear-gradient(180deg, var(--color-primary-900) calc(100% - 260px), rgba(14,35,80,.1) calc(100% - 150px), rgba(14,35,80,0) 100%); }
+}
 
 /* ---------- 11. ステートメント(参考サイトの大きな英字コピーの考え方) ---------- */
 .c-statement { display: grid; gap: var(--space-6); align-items: end; }
@@ -800,7 +819,7 @@ button { cursor: pointer; }
 .l-footer { background: var(--color-bg-dark); color: var(--color-text-inverse); border-top: 1px solid rgba(255,255,255,.12); padding-block: var(--space-9) var(--space-6); }
 .l-footer__top { display: grid; gap: var(--space-7); }
 @media (min-width: 1024px) { .l-footer__top { grid-template-columns: 4fr 8fr; } }
-.l-footer__logo { font-family: var(--font-en); font-size: 28px; font-weight: var(--fw-bold); letter-spacing: .06em; }
+.l-footer__logo img { display: block; height: 32px; width: auto; }
 .l-footer__company { margin-top: var(--space-4); font-size: var(--fs-small); color: var(--color-primary-100); line-height: 2; }
 .l-footer__nav { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); }
 @media (min-width: 768px) { .l-footer__nav { grid-template-columns: repeat(4, 1fr); } }
@@ -830,6 +849,13 @@ button { cursor: pointer; }
 /* ---------- 29. トップのスライド(トラックの写真) ---------- */
 .c-hero-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.2s var(--easing); }
 .c-hero-slide.is-active { opacity: 1; }
+.c-hero-slide picture { display: contents; }
+/* スマホ: 写真は上半分の帯に横長のまま見せ、文字はその下の紺地に置く */
+@media (max-width: 767px) {
+  .c-hero__media { bottom: auto; height: calc(var(--header-h) + 66vw); }
+  .c-hero__media::after { background: linear-gradient(180deg, rgba(14,35,80,.5) 0%, rgba(14,35,80,0) 30%, rgba(14,35,80,0) 75%, var(--color-primary-900) 100%); }
+  .c-hero__inner { padding-top: calc(var(--header-h) + 66vw - var(--space-4)); }
+}
 .c-hero-slide img, .c-hero-slide .c-photo { width: 100%; height: 100%; object-fit: cover; aspect-ratio: auto; }
 .c-hero-slide.is-active img, .c-hero-slide.is-active .c-photo { animation: hero-zoom 7s linear forwards; }
 @keyframes hero-zoom { from { transform: scale(1); } to { transform: scale(1.06); } }

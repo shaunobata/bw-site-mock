@@ -22,7 +22,8 @@
 <header class="l-header l-header--overlay is-transparent">
   <div class="container l-header__inner">
     <a class="l-header__logo" href="index.html" aria-label="B-wide トップページ">
-      <span class="l-header__logo-mark">B-wide</span>
+      <img class="l-header__logo-img" src="assets/img/logo.png" alt="B-WIDE" width="565" height="120">
+      <img class="l-header__logo-img l-header__logo-img--white" src="assets/img/logo-white.png" alt="" width="565" height="120">
       <span class="l-header__logo-sub">自動車の陸送・レッカー|横浜市都筑区</span>
     </a>
     <nav class="l-header__nav" aria-label="グローバルナビゲーション">
@@ -51,7 +52,7 @@
 
 <div class="l-drawer" id="drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="メニュー">
   <div class="container l-drawer__head">
-    <a class="l-header__logo" href="index.html"><span class="l-header__logo-mark">B-wide</span></a>
+    <a class="l-header__logo" href="index.html"><img class="l-header__logo-img" src="assets/img/logo.png" alt="B-WIDE トップページ" width="565" height="120"></a>
     <button type="button" class="l-drawer__close" aria-label="メニューを閉じる"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>CLOSE</button>
   </div>
   <div class="container l-drawer__body">
@@ -84,9 +85,9 @@
 
 <section class="c-hero" data-hero>
   <div class="c-hero__media c-hero-slider" data-slider aria-hidden="true">
-    <div class="c-hero-slide is-active"><div class="c-photo c-photo--hero" role="img" aria-label="写真の差し込み位置: 積載車(トラック)の写真 1 ※先方から受領予定"><p class="c-photo__label"><b>PHOTO</b>積載車(トラック)の写真 1 ※先方から受領予定</p></div></div>
-    <div class="c-hero-slide"><div class="c-photo c-photo--hero c-photo--alt1" role="img" aria-label="写真の差し込み位置: 積載車(トラック)の写真 2 ※先方から受領予定"><p class="c-photo__label"><b>PHOTO</b>積載車(トラック)の写真 2 ※先方から受領予定</p></div></div>
-    <div class="c-hero-slide"><div class="c-photo c-photo--hero c-photo--alt2" role="img" aria-label="写真の差し込み位置: 積載車(トラック)の写真 3 ※先方から受領予定"><p class="c-photo__label"><b>PHOTO</b>積載車(トラック)の写真 3 ※先方から受領予定</p></div></div>
+    <div class="c-hero-slide is-active"><picture><source media="(max-width: 767px)" srcset="assets/img/flat-hino-evening-800.jpg"><img src="assets/img/flat-hino-evening.jpg" alt=""></picture></div>
+    <div class="c-hero-slide"><picture><source media="(max-width: 767px)" srcset="assets/img/flat-isuzu-night-800.jpg"><img src="assets/img/flat-isuzu-night.jpg" alt=""></picture></div>
+    <div class="c-hero-slide"><picture><source media="(max-width: 767px)" srcset="assets/img/box-pair-night-800.jpg"><img src="assets/img/box-pair-night.jpg" alt=""></picture></div>
   </div>
   <div class="container c-hero__inner">
     <p class="c-hero__label">自動車の陸送・レッカー|横浜市都筑区</p>
@@ -153,7 +154,7 @@
 </div>
     <div class="c-service-grid">
       <a class="c-card-service c-card-service--feature js-reveal" href="service/transport.html">
-        <div class="c-card-service__media"><div class="c-photo c-photo--wide" role="img" aria-label="写真の差し込み位置: 積載車への積み込み"><p class="c-photo__label"><b>PHOTO</b>積載車への積み込み</p></div></div>
+        <div class="c-card-service__media"><div class="c-photo c-photo--img c-photo--wide"><img src="assets/img/flat-loading-garage.jpg" srcset="assets/img/flat-loading-garage-800.jpg 800w, assets/img/flat-loading-garage.jpg 1477w" sizes="(max-width: 767px) 100vw, 50vw" alt="平車に積み込んだお車" loading="lazy" decoding="async"></div></div>
         <div class="c-card-service__body">
           <span class="c-card-service__en">01 / TRANSPORT</span>
           <h3>陸送</h3>
@@ -162,7 +163,7 @@
         </div>
       </a>
       <a class="c-card-service js-reveal" data-delay="0.1" href="service/transport.html#circuit">
-        <div class="c-card-service__media"><div class="c-photo " role="img" aria-label="写真の差し込み位置: サーキットへの送迎"><p class="c-photo__label"><b>PHOTO</b>サーキットへの送迎</p></div></div>
+        <div class="c-card-service__media"><div class="c-photo " role="img" aria-label="写真の差し込み位置: サーキットへの送迎 ※写真未受領"><p class="c-photo__label"><b>PHOTO</b>サーキットへの送迎 ※写真未受領</p></div></div>
         <div class="c-card-service__body">
           <span class="c-card-service__en">02 / CIRCUIT</span>
           <h3>サーキット送迎</h3>
@@ -171,7 +172,7 @@
         </div>
       </a>
       <a class="c-card-service js-reveal" data-delay="0.2" href="service/transport.html#towing">
-        <div class="c-card-service__media"><div class="c-photo " role="img" aria-label="写真の差し込み位置: レッカー車での引き上げ"><p class="c-photo__label"><b>PHOTO</b>レッカー車での引き上げ</p></div></div>
+        <div class="c-card-service__media"><div class="c-photo " role="img" aria-label="写真の差し込み位置: レッカー車での引き上げ ※写真未受領"><p class="c-photo__label"><b>PHOTO</b>レッカー車での引き上げ ※写真未受領</p></div></div>
         <div class="c-card-service__body">
           <span class="c-card-service__en">03 / TOWING</span>
           <h3>レッカー</h3>
@@ -192,19 +193,19 @@
 </div>
     <div class="c-fleet-grid">
   <a class="c-fleet-card js-reveal" href="service/fleet.html#flat3">
-    <div class="c-fleet-card__media"><div class="c-photo " role="img" aria-label="写真の差し込み位置: 平車(3t車)の写真"><p class="c-photo__label"><b>PHOTO</b>平車(3t車)の写真</p></div></div>
+    <div class="c-fleet-card__media"><div class="c-photo c-photo--img "><img src="assets/img/flat-isuzu-city.jpg" srcset="assets/img/flat-isuzu-city-800.jpg 800w, assets/img/flat-isuzu-city.jpg 1477w" sizes="(max-width: 767px) 50vw, 25vw" alt="平車(3t車)" loading="lazy" decoding="async"></div></div>
     <div class="c-fleet-card__body"><span class="c-fleet-card__en">FLAT BODY 3t</span><h3>平車(3t車)</h3><p>保有台数 <span class="tbd">【要確認: 台数】</span></p></div>
   </a>
   <a class="c-fleet-card js-reveal" data-delay="0.1" href="service/fleet.html#flat4">
-    <div class="c-fleet-card__media"><div class="c-photo " role="img" aria-label="写真の差し込み位置: 平車(4t車)の写真"><p class="c-photo__label"><b>PHOTO</b>平車(4t車)の写真</p></div></div>
+    <div class="c-fleet-card__media"><div class="c-photo c-photo--img "><img src="assets/img/flat-hino-front.jpg" srcset="assets/img/flat-hino-front-800.jpg 800w, assets/img/flat-hino-front.jpg 1477w" sizes="(max-width: 767px) 50vw, 25vw" alt="平車(4t車)" loading="lazy" decoding="async"></div></div>
     <div class="c-fleet-card__body"><span class="c-fleet-card__en">FLAT BODY 4t</span><h3>平車(4t車)</h3><p>保有台数 <span class="tbd">【要確認: 台数】</span></p></div>
   </a>
   <a class="c-fleet-card js-reveal" data-delay="0.2" href="service/fleet.html#box">
-    <div class="c-fleet-card__media"><div class="c-photo " role="img" aria-label="写真の差し込み位置: 箱車の写真"><p class="c-photo__label"><b>PHOTO</b>箱車の写真</p></div></div>
+    <div class="c-fleet-card__media"><div class="c-photo c-photo--img "><img src="assets/img/box-loading-day.jpg" srcset="assets/img/box-loading-day-800.jpg 800w, assets/img/box-loading-day.jpg 1477w" sizes="(max-width: 767px) 50vw, 25vw" alt="箱車" loading="lazy" decoding="async"></div></div>
     <div class="c-fleet-card__body"><span class="c-fleet-card__en">BOX</span><h3>箱車</h3><p>保有台数 <span class="tbd">【要確認: 台数】</span></p></div>
   </a>
   <a class="c-fleet-card js-reveal" data-delay="0.3" href="service/fleet.html#wrecker">
-    <div class="c-fleet-card__media"><div class="c-photo " role="img" aria-label="写真の差し込み位置: レッカー車の写真"><p class="c-photo__label"><b>PHOTO</b>レッカー車の写真</p></div></div>
+    <div class="c-fleet-card__media"><div class="c-photo " role="img" aria-label="写真の差し込み位置: レッカー車の写真 ※写真未受領"><p class="c-photo__label"><b>PHOTO</b>レッカー車の写真 ※写真未受領</p></div></div>
     <div class="c-fleet-card__body"><span class="c-fleet-card__en">WRECKER</span><h3>レッカー車</h3><p>保有台数 <span class="tbd">【要確認: 台数】</span></p></div>
   </a>
 </div>
@@ -239,7 +240,7 @@
     <div class="grid grid--3">
       
 <a class="c-card-case js-reveal" href="case/detail.html" data-types="transport">
-  <div class="c-card-case__media"><div class="c-photo " role="img" aria-label="写真の差し込み位置: 事例のアイキャッチ(4:3)"><p class="c-photo__label"><b>PHOTO</b>事例のアイキャッチ(4:3)</p></div></div>
+  <div class="c-card-case__media"><div class="c-photo " role="img" aria-label="写真の差し込み位置: 事例のアイキャッチ(4:3) ※写真未受領"><p class="c-photo__label"><b>PHOTO</b>事例のアイキャッチ(4:3) ※写真未受領</p></div></div>
   <div class="c-card-case__body">
     <ul class="c-tags">
       <li class="c-tag c-tag--sample">サンプル</li>
@@ -252,7 +253,7 @@
 </a>
       
 <a class="c-card-case js-reveal" href="case/detail.html" data-types="circuit">
-  <div class="c-card-case__media"><div class="c-photo " role="img" aria-label="写真の差し込み位置: 事例のアイキャッチ(4:3)"><p class="c-photo__label"><b>PHOTO</b>事例のアイキャッチ(4:3)</p></div></div>
+  <div class="c-card-case__media"><div class="c-photo " role="img" aria-label="写真の差し込み位置: 事例のアイキャッチ(4:3) ※写真未受領"><p class="c-photo__label"><b>PHOTO</b>事例のアイキャッチ(4:3) ※写真未受領</p></div></div>
   <div class="c-card-case__body">
     <ul class="c-tags">
       <li class="c-tag c-tag--sample">サンプル</li>
@@ -265,7 +266,7 @@
 </a>
       
 <a class="c-card-case js-reveal" href="case/detail.html" data-types="storage">
-  <div class="c-card-case__media"><div class="c-photo " role="img" aria-label="写真の差し込み位置: 事例のアイキャッチ(4:3)"><p class="c-photo__label"><b>PHOTO</b>事例のアイキャッチ(4:3)</p></div></div>
+  <div class="c-card-case__media"><div class="c-photo " role="img" aria-label="写真の差し込み位置: 事例のアイキャッチ(4:3) ※写真未受領"><p class="c-photo__label"><b>PHOTO</b>事例のアイキャッチ(4:3) ※写真未受領</p></div></div>
   <div class="c-card-case__body">
     <ul class="c-tags">
       <li class="c-tag c-tag--sample">サンプル</li>
@@ -284,7 +285,7 @@
 <section class="section section--tight" aria-labelledby="other-title">
   <div class="container">
     <a class="c-other-service js-reveal" href="service/storage.html">
-      <div class="c-other-service__media"><div class="c-photo " role="img" aria-label="写真の差し込み位置: 保管中の車両(施設が特定されない構図)"><p class="c-photo__label"><b>PHOTO</b>保管中の車両(施設が特定されない構図)</p></div></div>
+      <div class="c-other-service__media"><div class="c-photo c-photo--img "><img src="assets/img/storage-hangar-tall.jpg" srcset="assets/img/storage-hangar-tall-800.jpg 800w, assets/img/storage-hangar-tall.jpg 1108w" sizes="(max-width: 767px) 100vw, 50vw" alt="保管中のお車" loading="lazy" decoding="async"></div></div>
       <div class="c-other-service__body">
         <span class="c-eyebrow">Other Service</span>
         <h2 id="other-title" class="u-mt-4">陸送とあわせて、高級車の保管も。</h2>
@@ -298,7 +299,7 @@
 <section class="section section--subtle c-recruit-band" aria-labelledby="recruit-title">
   <div class="container">
     <div class="c-split js-reveal">
-      <div><div class="c-photo c-photo--wide" role="img" aria-label="写真の差し込み位置: ドライバー・スタッフの仕事風景(顔の掲載は要確認)"><p class="c-photo__label"><b>PHOTO</b>ドライバー・スタッフの仕事風景(顔の掲載は要確認)</p></div></div>
+      <div><div class="c-photo c-photo--wide" role="img" aria-label="写真の差し込み位置: ドライバー・スタッフの仕事風景(顔の掲載は要確認) ※写真未受領"><p class="c-photo__label"><b>PHOTO</b>ドライバー・スタッフの仕事風景(顔の掲載は要確認) ※写真未受領</p></div></div>
       <div class="c-split__body">
         <span class="c-eyebrow">Recruit</span>
         <h2 id="recruit-title" class="u-mt-4">一緒に、車を運ぶ仲間を<br>募集しています。</h2>
@@ -330,7 +331,7 @@
   <div class="container">
     <div class="l-footer__top">
       <div>
-        <p class="l-footer__logo">B-wide</p>
+        <p class="l-footer__logo"><img src="assets/img/logo-white.png" alt="B-WIDE" width="565" height="120"></p>
         <p class="l-footer__company">
           正式社名 <span class="tbd">【要確認: 正式社名】</span><br>
           本社 神奈川県横浜市都筑区勝田町753番地5<br>

@@ -958,3 +958,11 @@ button { cursor: pointer; }
 .c-other-service__body { padding: var(--space-6) var(--space-5); }
 .c-other-service h2 { font-size: var(--fs-h3); }
 .c-other-service p { margin-top: var(--space-3); color: var(--color-text-sub); }
+
+/* ---------- 採用ページ ---------- */
+.c-info-table td > * + * { margin-top: var(--space-2); }
+.c-list { padding-left: 1.2em; list-style: disc; }
+.c-list li + li { margin-top: var(--space-1); }
+.c-salary { display: flex; align-items: baseline; gap: var(--space-2); margin-top: var(--space-4) !important; color: var(--color-primary-900) !important; font-weight: var(--fw-bold); }
+.c-salary span { font-size: var(--fs-small); color: var(--color-text-sub); }
+.c-salary strong { font-family: var(--font-en); font-size: var(--fs-h1); line-height: 1; color: var(--color-primary-600); }

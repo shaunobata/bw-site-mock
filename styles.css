@@ -477,11 +477,9 @@ button { cursor: pointer; }
 
 /* ---------- 13. サービスカード ---------- */
 .c-service-grid { display: grid; gap: var(--space-5); }
-@media (min-width: 768px) { .c-service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .c-service-grid > :first-child { grid-column: 1 / -1; } }
-@media (min-width: 1024px) {
-  .c-service-grid { grid-template-columns: 7fr 5fr; grid-template-rows: auto auto; }
-  .c-service-grid > :first-child { grid-column: 1; grid-row: 1 / span 2; }
-}
+@media (min-width: 768px) { .c-service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .c-service-grid { grid-template-columns: 7fr 5fr; } }
+.c-service-note { margin-top: var(--space-5); font-size: var(--fs-small); color: var(--color-text-sub); }
 .c-card-service {
   display: flex; flex-direction: column; background: var(--color-bg);
   border: 1px solid var(--color-border); border-radius: var(--radius-m); overflow: hidden;
@@ -498,11 +496,6 @@ button { cursor: pointer; }
 .c-card-service p { margin-top: var(--space-3); color: var(--color-text-sub); }
 .c-card-service .c-link-more { margin-top: auto; padding-top: var(--space-5); }
 .c-card-service--feature h3 { font-size: var(--fs-h2); }
-@media (min-width: 1024px) {
-  .c-service-grid > :not(:first-child) { flex-direction: row; }
-  .c-service-grid > :not(:first-child) .c-card-service__media { flex: 0 0 42%; }
-  .c-service-grid > :not(:first-child) .c-photo { height: 100%; aspect-ratio: auto; min-height: 220px; }
-}
 /* 横長版(サービス一覧) */
 .c-card-service--row { display: grid; }
 @media (min-width: 768px) {
@@ -895,7 +888,8 @@ button { cursor: pointer; }
 .c-tel-panel p { color: var(--color-text-sub); font-size: var(--fs-small); }
 .c-tel-panel__num { font-size: clamp(28px, 6vw, 44px); }
 .c-fleet-grid { display: grid; gap: var(--space-4); grid-template-columns: repeat(2, minmax(0, 1fr)); }
-@media (min-width: 1024px) { .c-fleet-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-5); } }
+.c-fleet-grid > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+@media (min-width: 1024px) { .c-fleet-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); } .c-fleet-grid > :last-child:nth-child(odd) { grid-column: auto; } }
 .c-fleet-card { display: flex; flex-direction: column; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-m); overflow: hidden; transition: box-shadow var(--duration-base) var(--easing); }
 .c-fleet-card:hover { box-shadow: var(--shadow-card-hover); }
 .c-fleet-card__media { overflow: hidden; }

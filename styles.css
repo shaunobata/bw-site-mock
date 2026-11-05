@@ -455,7 +455,8 @@ button { cursor: pointer; }
 .c-statement { display: grid; gap: var(--space-6); align-items: end; }
 @media (min-width: 1024px) {
   .c-statement { grid-template-columns: 7fr 5fr; gap: var(--space-8); }
-  .c-statement--num-right { grid-template-columns: 5fr 7fr; }
+  .c-statement--about { grid-template-columns: 5fr 7fr; align-items: start; }
+  .c-statement--about .c-statement__body > p:first-child { margin-top: 0; }
 }
 .c-statement__en {
   font-family: var(--font-en); font-weight: var(--fw-bold); text-transform: uppercase;
@@ -946,12 +947,6 @@ button { cursor: pointer; }
 .c-btn--accent:hover { background: #A11A25; }
 
 /* 大きな数字(月間の陸送台数) */
-.c-bignum { border-left: 6px solid var(--color-accent-strong); padding-left: var(--space-5); }
-.c-bignum__label { font-size: var(--fs-h4); font-weight: var(--fw-bold); }
-.c-bignum__value { display: flex; align-items: baseline; gap: var(--space-2); line-height: 1; margin-top: var(--space-3); }
-.c-bignum__value .u-en { font-size: clamp(72px, 12vw, 148px); font-weight: var(--fw-bold); color: var(--color-primary-900); letter-spacing: -.02em; }
-.c-bignum__unit { font-size: clamp(24px, 3vw, 36px); font-weight: var(--fw-bold); }
-.c-bignum__note { margin-top: var(--space-3); font-size: var(--fs-small); color: var(--color-text-sub); }
 @media (min-width: 1024px) { .c-stats--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 /* あわせて承るサービス(高級車保管) */

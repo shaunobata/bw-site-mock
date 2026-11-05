@@ -453,7 +453,10 @@ button { cursor: pointer; }
 
 /* ---------- 11. ステートメント(参考サイトの大きな英字コピーの考え方) ---------- */
 .c-statement { display: grid; gap: var(--space-6); align-items: end; }
-@media (min-width: 1024px) { .c-statement { grid-template-columns: 7fr 5fr; gap: var(--space-8); } }
+@media (min-width: 1024px) {
+  .c-statement { grid-template-columns: 7fr 5fr; gap: var(--space-8); }
+  .c-statement--num-right { grid-template-columns: 5fr 7fr; }
+}
 .c-statement__en {
   font-family: var(--font-en); font-weight: var(--fw-bold); text-transform: uppercase;
   font-size: clamp(36px, 7vw, 80px); line-height: 1.02; letter-spacing: .01em; color: var(--color-primary-900);

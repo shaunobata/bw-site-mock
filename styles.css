@@ -69,8 +69,8 @@
   --fixed-cta-h: 60px;
   --section-y: var(--space-9);
 
-  --radius-s: 2px;
-  --radius-m: 4px;
+  --radius-s: 6px;
+  --radius-m: 12px;
   --radius-full: 999px;
   --shadow-header: 0 1px 0 rgba(14,35,80,.08), 0 4px 16px rgba(14,35,80,.06);
   --shadow-card-hover: 0 8px 24px rgba(14,35,80,.12);
@@ -966,3 +966,7 @@ button { cursor: pointer; }
 .c-salary { display: flex; align-items: baseline; gap: var(--space-2); margin-top: var(--space-4) !important; color: var(--color-primary-900) !important; font-weight: var(--fw-bold); }
 .c-salary span { font-size: var(--fs-small); color: var(--color-text-sub); }
 .c-salary strong { font-family: var(--font-en); font-size: var(--fs-h1); line-height: 1; color: var(--color-primary-600); }
+
+/* ---------- 角丸(写真・回答・ドロップダウン。カード内の写真はカード側の角丸に任せる) ---------- */
+.c-photo, .c-faq__a, .c-gnav__sub { border-radius: var(--radius-m); }
+.c-card-service .c-photo, .c-card-case .c-photo, .c-fleet-card .c-photo, .c-other-service .c-photo, .c-photo--hero { border-radius: 0; }

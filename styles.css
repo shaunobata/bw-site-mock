@@ -722,7 +722,7 @@ button { cursor: pointer; }
 .c-split__body > .c-eyebrow + h2 { margin-top: var(--space-3); }
 
 .c-combo { display: grid; gap: var(--space-5); }
-@media (min-width: 768px) { .c-combo { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 768px) { .c-combo { grid-template-columns: 1fr 1fr; } .c-combo--single { grid-template-columns: minmax(0, 1fr); } }
 .c-combo__flow { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; margin-bottom: var(--space-4); }
 .c-combo__chip { padding: var(--space-2) var(--space-4); border: 1px solid var(--color-primary-600); color: var(--color-primary-600); border-radius: var(--radius-full); font-size: var(--fs-small); font-weight: var(--fw-bold); background: var(--color-bg); }
 .c-combo__plus { color: var(--color-primary-500); font-family: var(--font-en); font-weight: 700; }
@@ -968,3 +968,10 @@ button { cursor: pointer; }
 /* ---------- 角丸(写真・回答・ドロップダウン。カード内の写真はカード側の角丸に任せる) ---------- */
 .c-photo, .c-faq__a, .c-gnav__sub { border-radius: var(--radius-m); }
 .c-card-service .c-photo, .c-card-case .c-photo, .c-fleet-card .c-photo, .c-other-service .c-photo, .c-photo--hero { border-radius: 0; }
+
+/* カードが1枚のとき(トップの陸送サービス) */
+.c-service-grid--single { grid-template-columns: minmax(0, 1fr) !important; }
+@media (min-width: 768px) {
+  .c-service-grid--single .c-card-service--row { grid-template-columns: 7fr 5fr; }
+  .c-service-grid--single .c-card-service--row .c-photo { min-height: 360px; }
+}

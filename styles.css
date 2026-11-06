@@ -939,7 +939,6 @@ button { cursor: pointer; }
 .c-cta-band h2 { font-size: clamp(26px, 3.4vw, 40px); }
 
 /* ファーストビュー: 日本語のキャッチコピーを主役に */
-.c-hero__label { display: inline-block; padding: 4px 12px; background: var(--color-accent-strong); color: #fff; font-size: var(--fs-small); font-weight: var(--fw-bold); letter-spacing: .08em; }
 .c-hero__catch { margin-top: var(--space-5); font-size: clamp(40px, 7vw, 88px) !important; line-height: 1.25 !important; letter-spacing: .04em; }
 .c-hero__en-sub { margin-top: var(--space-3); font-family: var(--font-en); font-size: clamp(16px, 1.6vw, 20px); font-weight: var(--fw-medium); letter-spacing: .06em; color: var(--color-accent); }
 .c-hero__sub { max-width: 34em; }
@@ -975,3 +974,8 @@ button { cursor: pointer; }
   .c-service-grid--single .c-card-service--row { grid-template-columns: 7fr 5fr; }
   .c-service-grid--single .c-card-service--row .c-photo { min-height: 360px; }
 }
+
+/* キャッチは2行で、写真を隠しにくい大きさに */
+.c-hero__catch { font-size: clamp(30px, 4.4vw, 56px) !important; }
+.c-hero__catch span { display: block; }
+@media (max-width: 767px) { .c-hero__inner { padding-top: calc(var(--header-h) + 66vw + var(--space-3)); } } /* 写真と文字の間をあける */

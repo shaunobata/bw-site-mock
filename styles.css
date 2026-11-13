@@ -559,6 +559,7 @@ button { cursor: pointer; }
 .c-pillars { display: grid; gap: 0; border-top: 1px solid rgba(255,255,255,.18); }
 @media (min-width: 768px) { .c-pillars { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) { .c-pillars { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 768px) { .c-pillars.c-pillars--3 { grid-template-columns: repeat(3, 1fr); } }
 .c-pillar { padding: var(--space-6) var(--space-5) var(--space-6) 0; border-bottom: 1px solid rgba(255,255,255,.18); }
 @media (min-width: 1024px) { .c-pillar { padding: var(--space-7) var(--space-5); border-bottom: 0; border-right: 1px solid rgba(255,255,255,.18); } .c-pillar:first-child { padding-left: 0; } .c-pillar:last-child { border-right: 0; } }
 .c-pillar__icon { width: 40px; height: 40px; color: var(--color-accent); }
@@ -604,6 +605,7 @@ button { cursor: pointer; }
 
 .c-anchor-nav { position: sticky; top: var(--header-h); z-index: 50; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--color-border); }
 .c-anchor-nav ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; }
+.c-anchor-nav--3 ul { grid-template-columns: repeat(3, 1fr); }
 @media (min-width: 768px) { .c-anchor-nav ul { display: flex; gap: var(--space-2); } }
 .c-anchor-nav a { display: flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 var(--space-4); font-size: var(--fs-small); font-weight: var(--fw-bold); border-bottom: 2px solid transparent; }
 .c-anchor-nav a:hover { color: var(--color-primary-700); }
@@ -979,3 +981,7 @@ button { cursor: pointer; }
 .c-hero__catch { font-size: clamp(30px, 4.4vw, 56px) !important; }
 .c-hero__catch span { display: block; }
 @media (max-width: 767px) { .c-hero__inner { padding-top: calc(var(--header-h) + 66vw + var(--space-3)); } } /* 写真と文字の間をあける */
+
+/* 本社の地図(スマホ幅でもはみ出さない) */
+.c-map { width: 100%; }
+.c-map iframe { display: block; width: 100%; height: 340px; border: 0; border-radius: var(--radius-m); }

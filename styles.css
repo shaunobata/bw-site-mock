@@ -985,3 +985,8 @@ button { cursor: pointer; }
 /* 本社の地図(スマホ幅でもはみ出さない) */
 .c-map { width: 100%; }
 .c-map iframe { display: block; width: 100%; height: 340px; border: 0; border-radius: var(--radius-m); }
+
+/* 英字ラベルを外したあとの余白(2026-11) */
+.c-page-head h1 { margin-top: var(--space-7); }
+.c-card-service h3, .c-fleet-card h3, .c-feature__num + h3 { margin-top: 0; }
+.c-feature__num + h3 { margin-top: var(--space-4); }
